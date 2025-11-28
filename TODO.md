@@ -1,0 +1,5 @@
+- [ ] Add IDs to sections in index.html: id="home" to main, id="about" to AboutMe, id="skills" to skills, id="project" to project (contact already has id)
+- [ ] Update nav links in index.html to href="#home", "#about", "#skills", "#project", "#contact"
+- [ ] Add name attributes to form inputs in index.html: name="nama" to Nama input, name="email" to Email, name="pesan" to textarea
+- [ ] Fix script.js: correct selectors, add form submit event listener with preventDefault, alert success, clear fields
+- [ ] Add smooth scrolling CSS: html { scroll-behavior: smooth; }
