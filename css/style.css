@@ -638,14 +638,13 @@
     }
 
     /* home */
-
     main .bgoverlay {
         height: 120px;
     }
 
     main .foto {
-        top: 23%;
-        left: 5%;
+        top: 30%;
+        left: 7%;
     }
 
     main .foto img {
