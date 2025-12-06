@@ -26,7 +26,6 @@
 
         <!-- My CSS -->
         <link rel="stylesheet" href="/css/style.css">
-        <script src="script.js"></script>
 
     </head>
     <body>
@@ -40,38 +39,55 @@
                 <i data-feather="search"></i>
             </div>
 
-            <div class="nav-item">
-                <a href="#home">Home</a>
-                <a href="#about">About me</a>
-                <a href="#skills">My Skill</a>
-                <a href="#project">Project</a>
-                <a href="#contact">Contact</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-right" id="navMenu">
+                <div class="nav-item">
+                    <a href="#home">Home</a>
+                    <a href="#about">About me</a>
+                    <a href="#skills">My Skill</a>
+                    <a href="#project">Project</a>
+                    <a href="#contact">Contact</a>
+                </div>
+    
+                <div class="nav-logo2">
+                    <span class="pembatas">|</span>
+                    <a href="https://github.com/Septia-ltte">
+                        <img src="asset/github (1).png" alt="logo github">
+                    </a>
+                </div>
             </div>
         </nav>
 
-        <main id="home">
-            <div class="filled">
-                <h1>PORTOFOLIO</h1>
-            </div>
-
-            <div class="stroked">
-                <h1>PORTOFOLIO<br>PORTOFOLIO<br>PORTOFOLIO</h1>
-            </div>
-
-            <div class="bgoverlay"></div>
-
-            <div class="foto">
-                <img src="asset/download.jpeg" alt="gmbar kucing">
-            </div>
+        <main>
+            <section id="home" class="home">
+                <div class="filled">
+                    <h1>PORTOFOLIO</h1>
+                </div>
+    
+                <div class="stroked">
+                    <h1>PORTOFOLIO<br>PORTOFOLIO<br>PORTOFOLIO</h1>
+                </div>
+    
+                <div class="bgoverlay"></div>
+    
+                <div class="foto">
+                    <img src="asset/WhatsApp Image 2025-12-06 at 09.37.19.jpeg" alt="tia">
+                </div>
+            </section>
 
             <section id="about" class="AboutMe">
                 <div class="about-header">
                     <div class="title">
-                        <h2>About Me</h2>
+                        <h1>About Me</h1>
                     </div>
 
                     <button class="download-btn">
-                        <a href="asset/download.jpeg" download>Download CV</a>
+                        <a href="asset/CV_septia.jpg" download>Download CV</a>
                     </button>
                 </div>
     
@@ -81,12 +97,16 @@
                         <br>
                         <p>I’m a passionate UI/UX Designer who loves creating <br> clean, user-centered, and visually appealing digital<br> experiences. With a strong focus on usability and <br>design thinking, I strive to turn complex ideas into<br> simple, engaging interfaces.</p>
                         <br>
-                        <button>www.linkedin.com/in/septia-uiuxdesigner</button>
+                        <button>
+                           <a href="https://www.linkedin.com/in/septia-rahma-3452483a0/">www.linkedin.com/in/septia-uiuxdesigner</a>
+                        </button>
                     </div>
     
                     <div class="photo">
+                        <img src="asset/foto-rmovebg.png" alt="foto">
+                        <div class="bottom-box"></div>
                         <div class="bottom-1">UI/UX Design</div>
-                        <div class="circle"></div>
+                        <div class="circle-poto"></div>
                         <div class="bottom-2">14th September 2009</div>
                     </div>
                 </div>                
@@ -153,12 +173,12 @@
                         </div>
 
                         <div class="column">
-                            <img src="asset/create-a-python-script.webp" alt="python">
+                            <img src="asset/create-a-python-script-removebg-preview.png" alt="python">
                             <h2>Python</h2>
                         </div>
 
                         <div class="column">
-                            <img src="asset/WhatsApp Image 2025-11-28 at 08.00.14.jpeg" alt="noodejs">
+                            <img src="asset/WhatsApp_Image_2025-11-28_at_08.00.14-removebg-preview.png" alt="noodejs">
                             <h2>Node JS</h2>
                         </div>
                     </div>           
@@ -180,23 +200,12 @@
                         </div>
                     </div>
 
-                    <div class="adobe-photoshop">
-                        <div class="label-1">
-                            <img src="asset/photoshop.png" class="logo">
-                            <span>Adobe Photoshop</span>
-                        </div>
-                        <div class="project-row-2">
-                            <img src="asset/Photoshop(1).webp">
-                            <img src="asset/Photoshop(2).jpg.webp">
-                        </div>
-                    </div>
-
                     <div class="figma">
                         <div class="label">
                             <img src="asset/figma (3).png" class="logo">
                             <span>Figma</span>
                         </div>
-                        <div class="project-row-3">
+                        <div class="project-row-2">
                             <img src="asset/240ce0b9581a246b5b2780002a95f4a4.jpg">
                             <img src="asset/Patisserie – Elegant & Romantic Landing Page Design 🎂.jpeg ">
                             <img src="asset/1bef907a0a1af5edfffd7e027c487082.jpg">
@@ -205,43 +214,84 @@
                 </div>           
             </section>
 
-            <section id="contact" class="contact">
-                <div class="container">
-                    <h2 class="section-title">Contact Me</h2>
-                    <div class="contact-content">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <h3>Email</h3>
-                                <p>septiar436@gmail.com</p>
+            <section class="contact" id="contact">
+                <h1 class="judul-contact">Contact Me</h1>
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <form action="https://formspree.io/f/xrbjvnjr" method="POST" class="contact-isi">
+                            <div class="input-container">
+                                <input type="text" name="nama" class="input" placeholder="Nama" required>
                             </div>
-                            <div class="contact-item">
-                                <h3>Phone</h3>
-                                <p>089526860669</p>
+    
+                            <div class="input-container">
+                                <input type="email" name="email" class="input" placeholder="Email" required>
                             </div>
-                            <div class="contact-item">
-                                <h3>Location</h3>
-                                <p>Depok, Indonesia</p>
+    
+                            <div class="input-container textarea">
+                                <textarea name="message" class="input" placeholder="Message" required></textarea>
                             </div>
-                        </div>
-                        
-                        <form action="" class="contact-form">
-                            <input type="text" name="nama" placeholder="Nama" required>
-                            <input type="email" name="email" placeholder="Email" required>
-                            <textarea name="pesan" placeholder="Pesan Anda" rows="5" required></textarea>
-                            <button type="submit">Kirim pesan</button>
+    
+                            <div>
+                                <input type="Submit" value="Submit" class="btn-contact">
+                            </div>
                         </form>
+                    </div>
+    
+                    <div class="contact-image">
+                        <img src="asset/Emails_Customizable_Isometric_Illustrations___Amico_Style-removebg-preview.png" alt="contact">
                     </div>
                 </div>
             </section>
+        
         </main>
 
-        <footer>
-           
+        <footer> 
+            <div class="container-footer">
+                <div class="footer-content">
+                    <h3>About me</h3>
+                    <p class="teks-footer">I’m a passionate UI/UX Designer who loves creating <br>
+                       clean, user-centered, and visually appealing digital <br>
+                       experiences. With a strong focus on usability and <br>
+                       design thinking, I strive to turn complex ideas into <br>
+                       simple, engaging interfaces.
+                    </p>
+                </div>               
+    
+                <div class="footer-content">
+                    <h3>Contact Us</h3>
+                    <p>Email    :septiar436@gmial.com</p>
+                    <p>Phone    :+62 89526860669</p>                   
+                    <p>Location :Depok, Indonesia</p>                   
+                </div>
+    
+                <div class="footer-content">
+                    <h3 class="jdul-icon">Follow Us </h3>
+                    <div class="footer-icon">
+                        <a href="https://www.facebook.com/profile.php?id=61558026694895&locale=id_ID">
+                            <img src="asset/facebook_3488302.png" alt="facebook">
+                        </a>                  
+                        
+                        <a href="https://www.tiktok.com/@icx_tiaa14">
+                            <img src="asset/social-media_15713399.png" alt="tiktok">                  
+                        </a>
+
+                        <a href="https://www.instagram.com/this_tidrac/">
+                            <img src="asset/instagram_3938051.png" alt="instagram">
+                        </a>
+
+                        <a href="https://x.com/SeptiaTiaa87">
+                            <img src="asset/twitter_3256013.png" alt="twitter">                  
+                        </a>
+                    </div>
+                </div>
+            </div>         
         </footer>
 
       <script>
-        feather.replace();
+      feather.replace();
       </script>
+      <script  src="script.js"></script>
+
     </body>
 </html>
 
